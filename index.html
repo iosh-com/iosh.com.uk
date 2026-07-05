@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Apex International — Certificate Verification</title>
+<meta name="description" content="Verify Apex International / IOSH training certificates instantly." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <span class="brand-name">Apex International</span>
+      <span class="brand-tag">Training &amp; Certification</span>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="verify.html">Verify Certificate</a>
+      <a href="qr-generator.html">QR Generator</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <span class="badge-approved">
+        <img src="assets/iosh-approved-badge.png" alt="IOSH" />
+        <span>Approved IOSH Provider</span>
+      </span>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <img src="assets/iosh-crest.png" alt="" class="hero-crest-watermark" aria-hidden="true" />
+    <div class="container">
+      <span class="eyebrow">Certificate Verification</span>
+      <h1>Every certificate we issue, provable in seconds.</h1>
+      <p class="hero-sub">
+        Apex International is an approved IOSH training centre. Enter any certificate
+        number below to confirm it was genuinely issued by us — instantly, and for free.
+      </p>
+      <div class="hero-actions">
+        <a href="verify.html" class="btn btn-primary">Verify a certificate</a>
+        <a href="qr-generator.html" class="btn btn-outline">Generate a QR code</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>How verification works</h2>
+        <p>No app, no login, no waiting on emails. Three steps, done on any device.</p>
+      </div>
+      <div class="steps">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <h3>Enter the certificate number</h3>
+          <p>Every certificate we issue carries a unique IOSH certificate number, printed at the bottom right.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <h3>We check our official record</h3>
+          <p>The number is matched against our live student register, kept up to date after every course we deliver.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <h3>Get an instant result</h3>
+          <p>See the student's name, course, issue date and status — or a clear "not found" message if it doesn't match.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="accred-panel">
+        <img src="assets/iosh-approved-badge.png" alt="IOSH Training" class="accred-badge" />
+        <div class="accred-text">
+          <h2>Delivered in association with IOSH</h2>
+          <p>
+            Apex International is an IOSH approved training centre. Our courses, including
+            IOSH Managing Safely, are approved and validated by the Institution of
+            Occupational Safety and Health, and every certificate we award can be checked here.
+          </p>
+        </div>
+        <a href="verify.html" class="btn btn-gold">Verify now</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-note">© <span data-year></span> Apex International. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="verify.html">Verify Certificate</a>
+      <a href="qr-generator.html">QR Generator</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Verify Certificate — Apex International</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <span class="brand-name">Apex International</span>
+      <span class="brand-tag">Training &amp; Certification</span>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="verify.html" class="active">Verify Certificate</a>
+      <a href="qr-generator.html">QR Generator</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <span class="badge-approved">
+        <img src="assets/iosh-approved-badge.png" alt="IOSH" />
+        <span>Approved IOSH Provider</span>
+      </span>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="verify-shell">
+  <div class="container">
+    <div class="verify-card">
+      <h1>Verify a certificate</h1>
+      <p class="verify-sub">Enter the IOSH certificate number exactly as printed on the certificate.</p>
+
+      <form id="verify-form" class="verify-form">
+        <div>
+          <label class="field-label" for="cert-number-input">Certificate number</label>
+          <input
+            type="text"
+            id="cert-number-input"
+            class="input-cert"
+            placeholder="e.g. 53358796-01-99PB"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Verify now</button>
+      </form>
+
+      <div class="result-area">
+        <div id="panel-loading" class="result-panel result-loading">
+          <div class="spinner"></div>
+          Checking our records…
+        </div>
+
+        <div id="panel-valid" class="result-panel result-valid">
+          <div class="result-header">
+            <div class="seal seal-valid">✓</div>
+            <div class="result-title valid-text">Certificate verified</div>
+          </div>
+          <p class="result-meta">This certificate matches our official record.</p>
+          <div class="result-grid">
+            <div class="result-field">
+              <div class="rf-label">Student name</div>
+              <div class="rf-value" id="rf-name">—</div>
+            </div>
+            <div class="result-field">
+              <div class="rf-label">Course</div>
+              <div class="rf-value" id="rf-course">—</div>
+            </div>
+            <div class="result-field">
+              <div class="rf-label">Issue date</div>
+              <div class="rf-value" id="rf-issue">—</div>
+            </div>
+            <div class="result-field">
+              <div class="rf-label">Status</div>
+              <div class="rf-value"><span id="rf-status-pill" class="status-pill pass">Verified</span></div>
+            </div>
+          </div>
+          <button id="view-cert-btn" class="btn btn-outline view-cert-btn btn-block">View full certificate</button>
+        </div>
+
+        <div id="panel-invalid" class="result-panel result-invalid">
+          <div class="result-header">
+            <div class="seal seal-invalid">✕</div>
+            <div class="result-title invalid-text">Certificate not found</div>
+          </div>
+          <p class="result-meta" id="invalid-message">We couldn't find a certificate matching that number.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="certificate-container" class="certificate-wrap" style="display:none;"></div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-note">© <span data-year></span> Apex International. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="verify.html">Verify Certificate</a>
+      <a href="qr-generator.html">QR Generator</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/script.js"></script>
+<script src="js/data.js"></script>
+<script src="js/certificate.js"></script>
+<script src="js/verify.js"></script>
+</body>
+</html>
